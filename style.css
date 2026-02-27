@@ -84,3 +84,116 @@ h1 {
     width: 100px;
     height: 100px;
 }
+
+/* 🔎 Search Section */
+.search-section {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;              /* Space between input & button */
+    flex-wrap: wrap;        /* Makes it responsive */
+}
+
+/* 🏙 City Input Field */
+#city-input {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    flex: 1;                /* Takes available space */
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✨ Focus Effect */
+#city-input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.4);
+}
+
+/* 🔍 Search Button */
+#search-btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* 🚀 Hover Effect */
+#search-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* 📱 Responsive for small screens */
+@media (max-width: 500px) {
+    .search-section {
+        flex-direction: column;
+    }
+
+    #search-btn {
+        width: 100%;
+    }
+}
+
+/* ❌ Error Message Styling */
+.error-message {
+    background: #ffe6e6;          /* Light red/pink */
+    color: #b30000;               /* Dark red text */
+    padding: 18px 20px;
+    border-radius: 12px;
+    border-left: 6px solid #ff4d4d;  /* Thick red left border */
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Optional icon styling */
+.error-message::before {
+    content: "❌";
+    font-size: 1.4rem;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Spinner Circle */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+/* Spin Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading Container */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
